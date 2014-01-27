@@ -519,6 +519,7 @@ class Mega(object):
 
             if self.options.get('verbose') is True:
                 # temp file size
+                percent = round(100 * float(file_info.st_size)/float(file_size), 2)
                 file_info = os.stat(temp_output_file.name)
                 print('{0} of {1} downloaded'.format(file_info.st_size, file_size))
 
